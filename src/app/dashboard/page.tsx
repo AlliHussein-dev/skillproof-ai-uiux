@@ -33,9 +33,9 @@ import { Input } from "@/components/ui/input";
 export default function DashboardPage() {
   const stats = [
     { label: "Certificates", value: "12", icon: Award, color: "text-primary" },
-    { label: "Tests Taken", value: "28", icon: Brain, color: "text-blue-500" },
-    { label: "Hours Studied", value: "156", icon: Clock, color: "text-green-500" },
-    { label: "Rank", value: "#247", icon: Trophy, color: "text-yellow-500" }
+    { label: "Tests Taken", value: "28", icon: Brain, color: "text-primary" },
+    { label: "Hours Studied", value: "156", icon: Clock, color: "text-primary" },
+    { label: "Rank", value: "#247", icon: Trophy, color: "text-primary" }
   ];
 
   const skillCategories = [
@@ -108,7 +108,7 @@ export default function DashboardPage() {
         <div className="flex h-full flex-col">
           {/* Logo */}
           <div className="flex h-16 items-center gap-2 border-b border-border px-6">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center glow-primary-soft">
               <GraduationCap className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-lg font-bold gradient-text">Skill Proof AI</span>
@@ -117,7 +117,7 @@ export default function DashboardPage() {
           {/* User Profile */}
           <div className="border-b border-border p-4">
             <div className="flex items-center gap-3">
-              <Avatar className="h-10 w-10">
+              <Avatar className="h-10 w-10 ring-2 ring-primary/20">
                 <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" />
                 <AvatarFallback>JD</AvatarFallback>
               </Avatar>
@@ -131,7 +131,7 @@ export default function DashboardPage() {
           {/* Navigation */}
           <nav className="flex-1 space-y-1 p-4">
             <Link href="/dashboard">
-              <Button variant="secondary" className="w-full justify-start gap-2">
+              <Button variant="secondary" className="w-full justify-start gap-2 hover-glow">
                 <Target className="w-4 h-4" />
                 Dashboard
               </Button>
@@ -165,7 +165,7 @@ export default function DashboardPage() {
           {/* Logout */}
           <div className="border-t border-border p-4">
             <Link href="/">
-              <Button variant="ghost" className="w-full justify-start gap-2 text-destructive hover:text-destructive">
+              <Button variant="ghost" className="w-full justify-start gap-2 text-primary hover:text-primary/80">
                 <LogOut className="w-4 h-4" />
                 Logout
               </Button>
@@ -187,17 +187,17 @@ export default function DashboardPage() {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
                   placeholder="Search skills, tests, certificates..."
-                  className="pl-10"
+                  className="pl-10 focus-ring"
                 />
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Button variant="ghost" size="icon" className="relative">
                 <Bell className="w-5 h-5" />
-                <span className="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full" />
+                <span className="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full animate-pulse-glow" />
               </Button>
               <Link href="/">
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="hover-glow">
                   View Profile
                 </Button>
               </Link>
@@ -215,11 +215,11 @@ export default function DashboardPage() {
           >
             <div className="flex items-center justify-between mb-2">
               <div>
-                <h1 className="text-3xl font-bold">Welcome back, John! 👋</h1>
+                <h1 className="text-3xl font-bold glow-text">Welcome back, John! 👋</h1>
                 <p className="text-muted-foreground mt-1">Track your progress and continue learning</p>
               </div>
               <Link href="/test/new">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 press-animate">
                   <Brain className="w-4 h-4 mr-2" />
                   Start New Test
                 </Button>
@@ -236,14 +236,14 @@ export default function DashboardPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="glow-card">
+                <Card className="glow-card hover-glow">
                   <CardContent className="pt-6">
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-sm text-muted-foreground">{stat.label}</p>
-                        <p className="text-3xl font-bold mt-1">{stat.value}</p>
+                        <p className="text-3xl font-bold mt-1 text-primary">{stat.value}</p>
                       </div>
-                      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ${stat.color}`}>
+                      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center glow-radial ${stat.color}`}>
                         <stat.icon className="w-6 h-6" />
                       </div>
                     </div>
@@ -263,7 +263,7 @@ export default function DashboardPage() {
                       <CardTitle>Your Skills</CardTitle>
                       <CardDescription>Track your progress across different skills</CardDescription>
                     </div>
-                    <Button variant="outline" size="sm">View All</Button>
+                    <Button variant="outline" size="sm" className="hover-glow">View All</Button>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -280,7 +280,7 @@ export default function DashboardPage() {
                               <div className="flex items-center gap-2">
                                 <span className="font-medium">{skill.name}</span>
                                 {skill.status === "certified" && (
-                                  <Badge variant="default" className="h-5 text-xs bg-primary/10 text-primary">
+                                  <Badge variant="default" className="h-5 text-xs bg-primary/10 text-primary border-primary/20">
                                     <Award className="w-3 h-3 mr-1" />
                                     Certified
                                   </Badge>
@@ -291,7 +291,7 @@ export default function DashboardPage() {
                                   </Badge>
                                 )}
                               </div>
-                              <span className="text-muted-foreground">{skill.level}%</span>
+                              <span className="text-primary font-semibold">{skill.level}%</span>
                             </div>
                             <Progress value={skill.level} className="h-2" />
                             <p className="text-xs text-muted-foreground">Last test: {skill.lastTest}</p>
@@ -312,9 +312,9 @@ export default function DashboardPage() {
                 <CardContent>
                   <div className="space-y-3">
                     {testHistory.map((test, idx) => (
-                      <div key={idx} className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors">
+                      <div key={idx} className="flex items-center justify-between p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors hover-glow cursor-pointer">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center glow-radial">
                             <Brain className="w-5 h-5 text-primary" />
                           </div>
                           <div>
@@ -323,7 +323,7 @@ export default function DashboardPage() {
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Badge variant={test.status === "passed" ? "default" : "secondary"}>
+                          <Badge variant={test.status === "passed" ? "default" : "secondary"} className="bg-primary/10 text-primary border-primary/20">
                             {test.score}%
                           </Badge>
                           <ChevronRight className="w-4 h-4 text-muted-foreground" />
@@ -347,7 +347,7 @@ export default function DashboardPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {recentCertificates.map((cert) => (
-                    <div key={cert.id} className="relative overflow-hidden rounded-lg border border-border p-4 hover:shadow-lg transition-all">
+                    <div key={cert.id} className="relative overflow-hidden rounded-lg border border-border p-4 hover:shadow-lg transition-all hover-glow cursor-pointer">
                       <div className="absolute top-2 right-2">
                         {cert.verified && (
                           <Badge className="bg-primary/10 text-primary border-primary/20">
@@ -360,7 +360,7 @@ export default function DashboardPage() {
                         <img 
                           src={cert.image} 
                           alt={cert.skill}
-                          className="w-12 h-12 rounded-lg object-cover"
+                          className="w-12 h-12 rounded-lg object-cover ring-2 ring-primary/20"
                         />
                         <div>
                           <p className="font-semibold">{cert.skill}</p>
@@ -369,11 +369,11 @@ export default function DashboardPage() {
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Trophy className="w-4 h-4 text-yellow-500" />
-                          <span className="text-lg font-bold">{cert.score}%</span>
+                          <Trophy className="w-4 h-4 text-primary" />
+                          <span className="text-lg font-bold text-primary">{cert.score}%</span>
                         </div>
                         <Link href={`/certificate/${cert.id}`}>
-                          <Button variant="ghost" size="sm">
+                          <Button variant="ghost" size="sm" className="hover-glow">
                             <Download className="w-4 h-4 mr-1" />
                             Download
                           </Button>
@@ -382,7 +382,7 @@ export default function DashboardPage() {
                     </div>
                   ))}
                   <Link href="/dashboard">
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full hover-glow">
                       View All Certificates
                     </Button>
                   </Link>
@@ -396,19 +396,19 @@ export default function DashboardPage() {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <Link href="/test/new">
-                    <Button variant="outline" className="w-full justify-start gap-2">
+                    <Button variant="outline" className="w-full justify-start gap-2 hover-glow">
                       <Brain className="w-4 h-4" />
                       Start Assessment
                     </Button>
                   </Link>
                   <Link href="/dashboard">
-                    <Button variant="outline" className="w-full justify-start gap-2">
+                    <Button variant="outline" className="w-full justify-start gap-2 hover-glow">
                       <Award className="w-4 h-4" />
                       View Certificates
                     </Button>
                   </Link>
                   <Link href="/dashboard">
-                    <Button variant="outline" className="w-full justify-start gap-2">
+                    <Button variant="outline" className="w-full justify-start gap-2 hover-glow">
                       <User className="w-4 h-4" />
                       Edit Profile
                     </Button>
@@ -417,14 +417,14 @@ export default function DashboardPage() {
               </Card>
 
               {/* Progress Card */}
-              <Card className="glow-card bg-gradient-to-br from-primary/10 via-transparent to-accent/10 border-primary/20">
+              <Card className="glow-card glow-edge bg-gradient-to-br from-primary/10 via-transparent to-primary/5 border-primary/20">
                 <CardContent className="pt-6">
                   <div className="text-center space-y-3">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto glow-primary-strong animate-pulse-glow">
                       <Trophy className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="text-2xl font-bold">Level 12</p>
+                      <p className="text-2xl font-bold text-primary">Level 12</p>
                       <p className="text-sm text-muted-foreground">Professional</p>
                     </div>
                     <Progress value={65} className="h-2" />
