@@ -147,14 +147,14 @@ export default function ResultsPage() {
                 >
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
                       <span className="text-2xl font-bold">{results.correctAnswers}/{results.totalQuestions}</span>
                     </div>
                     <p className="text-sm text-muted-foreground">Correct Answers</p>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                      <Clock className="w-5 h-5 text-blue-500" />
+                      <Clock className="w-5 h-5 text-primary" />
                       <span className="text-2xl font-bold">{results.timeSpent}</span>
                     </div>
                     <p className="text-sm text-muted-foreground">Time Spent</p>
@@ -242,12 +242,12 @@ export default function ResultsPage() {
               {/* Strengths */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500" />
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
                   <h3 className="font-semibold">Strengths</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {results.strengths.map((strength, idx) => (
-                    <Badge key={idx} variant="secondary" className="bg-green-500/10 text-green-700 dark:text-green-400">
+                    <Badge key={idx} variant="secondary" className="bg-primary/10 text-primary">
                       {strength}
                     </Badge>
                   ))}

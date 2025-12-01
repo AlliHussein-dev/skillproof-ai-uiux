@@ -250,7 +250,7 @@ export default function EmployerDashboardPage() {
                           <div className="flex flex-wrap gap-2">
                             {candidate.skills.map((skill, skillIdx) => (
                               <Badge key={skillIdx} variant="outline" className="gap-1">
-                                {skill.verified && <CheckCircle2 className="w-3 h-3 text-green-500" />}
+                                {skill.verified && <CheckCircle2 className="w-3 h-3 text-primary" />}
                                 {skill.name} ({skill.score}%)
                               </Badge>
                             ))}

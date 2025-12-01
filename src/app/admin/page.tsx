@@ -29,10 +29,10 @@ import { motion } from "framer-motion";
 
 export default function AdminPage() {
   const stats = [
-    { label: "Total Users", value: "12,847", icon: Users, change: "+12.5%", color: "text-blue-500" },
-    { label: "Tests Taken", value: "45,291", icon: Brain, change: "+18.2%", color: "text-purple-500" },
-    { label: "Certificates Issued", value: "28,934", icon: Award, change: "+15.7%", color: "text-green-500" },
-    { label: "Monthly Revenue", value: "$127K", icon: DollarSign, change: "+23.1%", color: "text-yellow-500" }
+    { label: "Total Users", value: "12,847", icon: Users, change: "+12.5%" },
+    { label: "Tests Taken", value: "45,291", icon: Brain, change: "+18.2%" },
+    { label: "Certificates Issued", value: "28,934", icon: Award, change: "+15.7%" },
+    { label: "Monthly Revenue", value: "$127K", icon: DollarSign, change: "+23.1%" }
   ];
 
   const recentUsers = [
@@ -147,7 +147,7 @@ export default function AdminPage() {
             </div>
             <div className="flex items-center gap-3">
               <Badge variant="outline" className="gap-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 All Systems Operational
               </Badge>
               <Avatar className="h-10 w-10">
@@ -187,8 +187,8 @@ export default function AdminPage() {
                           </Badge>
                         </div>
                       </div>
-                      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ${stat.color}`}>
-                        <stat.icon className="w-6 h-6" />
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                        <stat.icon className="w-6 h-6 text-primary" />
                       </div>
                     </div>
                   </CardContent>
@@ -259,7 +259,7 @@ export default function AdminPage() {
                           </div>
                           <div className="flex items-center gap-2">
                             {test.status === "completed" ? (
-                              <Badge className="bg-green-500/10 text-green-700 dark:text-green-400">
+                              <Badge className="bg-primary/10 text-primary">
                                 {test.score}%
                               </Badge>
                             ) : (
@@ -291,7 +291,7 @@ export default function AdminPage() {
                       <div key={idx} className="p-4 rounded-lg border border-border">
                         <div className="flex items-center justify-between mb-2">
                           <p className="text-sm text-muted-foreground">{item.metric}</p>
-                          <CheckCircle2 className="w-4 h-4 text-green-500" />
+                          <CheckCircle2 className="w-4 h-4 text-primary" />
                         </div>
                         <p className="text-2xl font-bold">{item.value}</p>
                       </div>

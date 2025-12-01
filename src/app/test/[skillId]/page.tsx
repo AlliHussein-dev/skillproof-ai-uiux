@@ -279,7 +279,7 @@ export default function TestPage() {
                     idx === currentQuestion
                       ? "border-primary bg-primary text-primary-foreground"
                       : idx < currentQuestion
-                      ? "border-green-500 bg-green-500/10 text-green-500"
+                      ? "border-primary bg-primary/10 text-primary"
                       : "border-border hover:bg-muted"
                   }`}
                 >

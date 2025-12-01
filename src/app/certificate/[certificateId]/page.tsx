@@ -131,8 +131,8 @@ export default function CertificatePage() {
                       <p className="font-mono font-semibold">{certificate.id}</p>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span className="font-semibold text-green-500">Blockchain Verified</span>
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                      <span className="font-semibold text-primary">Blockchain Verified</span>
                     </div>
                   </div>
                 </div>
