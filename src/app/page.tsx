@@ -191,39 +191,39 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen" style={{ background: '#010001' }}>
+    <div className="min-h-screen bg-[#0A0E27]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl" style={{ background: 'rgba(34, 35, 33, 0.9)', borderBottom: '1px solid rgba(161, 201, 154, 0.2)' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#1A1F3A]/90 border-b border-blue-500/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-2 hover-glow">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center glow-primary-soft" style={{ background: '#A1C99A' }}>
-                <GraduationCap className="w-5 h-5" style={{ color: '#010001' }} />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-500 shadow-lg shadow-blue-500/50">
+                <GraduationCap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">Skill Proof AI</span>
+              <span className="text-xl font-bold text-white">Skill Proof AI</span>
             </Link>
             
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#features" className="text-sm font-medium hover-glow transition-colors" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>
+              <Link href="#features" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 Features
               </Link>
-              <Link href="#how-it-works" className="text-sm font-medium hover-glow transition-colors" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>
+              <Link href="#how-it-works" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 How It Works
               </Link>
-              <Link href="#pricing" className="text-sm font-medium hover-glow transition-colors" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>
+              <Link href="#pricing" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 Pricing
               </Link>
-              <Link href="/employer-dashboard" className="text-sm font-medium hover-glow transition-colors" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>
+              <Link href="/employer-dashboard" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 For Employers
               </Link>
             </div>
 
             <div className="flex items-center gap-3">
               <Link href="/login">
-                <Button variant="ghost" size="sm" className="hover-glow" style={{ color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>Sign In</Button>
+                <Button variant="ghost" size="sm" className="text-white border border-blue-500/30 hover:bg-blue-500/10">Sign In</Button>
               </Link>
               <Link href="/register">
-                <Button size="sm" className="hover-glow press-animate glow-primary-soft" style={{ background: '#A1C99A', color: '#010001' }}>
+                <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/50">
                   Get Started
                 </Button>
               </Link>
@@ -234,18 +234,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top left, rgba(161, 201, 154, 0.05), transparent), radial-gradient(circle at bottom right, rgba(100, 93, 74, 0.05), transparent)' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
         
-        {/* Floating elements with neon glow */}
+        {/* Floating elements with blue glow */}
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 rounded-full blur-3xl animate-pulse-glow"
-          style={{ background: 'rgba(161, 201, 154, 0.2)' }}
+          className="absolute top-20 left-10 w-20 h-20 rounded-full blur-3xl bg-blue-500/20 animate-pulse-glow"
           animate={{ y: [0, 30, 0], scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 rounded-full blur-3xl animate-pulse-glow"
-          style={{ background: 'rgba(100, 93, 74, 0.15)' }}
+          className="absolute bottom-20 right-10 w-32 h-32 rounded-full blur-3xl bg-purple-500/15 animate-pulse-glow"
           animate={{ y: [0, -40, 0], scale: [1, 1.3, 1] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
@@ -257,42 +255,42 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
+              <Badge className="mb-4 bg-blue-500/15 text-blue-400 border border-blue-500/30">
                 <Sparkles className="w-3 h-3 mr-1" />
                 AI-Powered Skill Certification
               </Badge>
               
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ color: '#A1C99A' }}>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
                 Prove Your Skills with{" "}
-                <span className="gradient-text glow-text">AI Precision</span>
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">AI Precision</span>
               </h1>
               
-              <p className="text-xl mb-8 leading-relaxed" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+              <p className="text-xl mb-8 leading-relaxed text-gray-300">
                 Get blockchain-verified certificates recognized by top employers worldwide. 
                 Our AI adapts to your skill level for accurate, fair assessments.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/register">
-                  <Button size="lg" className="w-full sm:w-auto hover-glow press-animate glow-primary" style={{ background: '#A1C99A', color: '#010001' }}>
+                  <Button size="lg" className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/50">
                     Start Free Assessment
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="#how-it-works">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto hover-glow" style={{ color: '#A1C99A', borderColor: 'rgba(161, 201, 154, 0.4)' }}>
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-blue-500/40 hover:bg-blue-500/10">
                     See How It Works
                   </Button>
                 </Link>
               </div>
 
-              <div className="flex items-center gap-8 text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
+              <div className="flex items-center gap-8 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" style={{ color: '#A1C99A' }} />
+                  <CheckCircle2 className="w-4 h-4 text-blue-400" />
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4" style={{ color: '#A1C99A' }} />
+                  <CheckCircle2 className="w-4 h-4 text-blue-400" />
                   <span>500+ companies trust us</span>
                 </div>
               </div>
@@ -304,31 +302,30 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative glow-card rounded-2xl p-8" style={{ background: '#645D4A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
-                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-2xl animate-pulse-glow" style={{ background: 'rgba(161, 201, 154, 0.3)' }} />
+              <div className="relative rounded-2xl p-8 bg-[#1A1F3A] border border-blue-500/30 shadow-xl shadow-blue-500/20">
+                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-2xl bg-blue-500/30 animate-pulse-glow" />
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center glow-radial" style={{ background: 'rgba(161, 201, 154, 0.2)' }}>
-                        <Brain className="w-6 h-6" style={{ color: '#A1C99A' }} />
+                      <div className="w-12 h-12 rounded-full flex items-center justify-center bg-blue-500/20">
+                        <Brain className="w-6 h-6 text-blue-400" />
                       </div>
                       <div>
-                        <p className="font-semibold" style={{ color: '#A1C99A' }}>AI Assessment</p>
-                        <p className="text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>In Progress</p>
+                        <p className="font-semibold text-white">AI Assessment</p>
+                        <p className="text-sm text-gray-400">In Progress</p>
                       </div>
                     </div>
-                    <Badge className="glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.2)', color: '#A1C99A' }}>Live</Badge>
+                    <Badge className="bg-blue-500/20 text-blue-400">Live</Badge>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span style={{ color: 'rgba(161, 201, 154, 0.6)' }}>Progress</span>
-                      <span className="font-medium" style={{ color: '#A1C99A' }}>67%</span>
+                      <span className="text-gray-400">Progress</span>
+                      <span className="font-medium text-white">67%</span>
                     </div>
-                    <div className="h-2 rounded-full overflow-hidden" style={{ background: '#222321' }}>
+                    <div className="h-2 rounded-full overflow-hidden bg-[#0A0E27]">
                       <motion.div
-                        className="h-full glow-primary-soft"
-                        style={{ background: 'linear-gradient(90deg, #A1C99A, rgba(161, 201, 154, 0.7))' }}
+                        className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
                         initial={{ width: 0 }}
                         animate={{ width: "67%" }}
                         transition={{ duration: 1.5, delay: 0.5 }}
@@ -336,18 +333,18 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-4 pt-4" style={{ borderTop: '1px solid rgba(161, 201, 154, 0.2)' }}>
+                  <div className="grid grid-cols-3 gap-4 pt-4 border-t border-blue-500/20">
                     <div>
-                      <p className="text-2xl font-bold glow-text" style={{ color: '#A1C99A' }}>15</p>
-                      <p className="text-xs" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>Questions</p>
+                      <p className="text-2xl font-bold text-white">15</p>
+                      <p className="text-xs text-gray-400">Questions</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold glow-text" style={{ color: '#A1C99A' }}>12:34</p>
-                      <p className="text-xs" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>Time Left</p>
+                      <p className="text-2xl font-bold text-white">12:34</p>
+                      <p className="text-xs text-gray-400">Time Left</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold glow-text" style={{ color: '#A1C99A' }}>92%</p>
-                      <p className="text-xs" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>Accuracy</p>
+                      <p className="text-2xl font-bold text-white">92%</p>
+                      <p className="text-xs text-gray-400">Accuracy</p>
                     </div>
                   </div>
                 </div>
@@ -355,18 +352,17 @@ export default function Home() {
 
               {/* Floating certificate preview */}
               <motion.div
-                className="absolute -bottom-6 -left-6 rounded-xl p-4 shadow-xl glow-card"
-                style={{ background: '#645D4A', border: '1px solid rgba(161, 201, 154, 0.3)' }}
+                className="absolute -bottom-6 -left-6 rounded-xl p-4 shadow-xl bg-[#1A1F3A] border border-blue-500/30"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg flex items-center justify-center glow-radial" style={{ background: 'rgba(161, 201, 154, 0.2)' }}>
-                    <Award className="w-5 h-5" style={{ color: '#A1C99A' }} />
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-blue-500/20">
+                    <Award className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold" style={{ color: '#A1C99A' }}>Certificate Ready</p>
-                    <p className="text-xs" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>Verified by AI</p>
+                    <p className="text-sm font-semibold text-white">Certificate Ready</p>
+                    <p className="text-xs text-gray-400">Verified by AI</p>
                   </div>
                 </div>
               </motion.div>
@@ -376,17 +372,17 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#222321' }}>
+      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1A1F3A]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
               <Zap className="w-3 h-3 mr-1" />
               Features
             </Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-              Everything You Need to <span className="gradient-text">Succeed</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+              Everything You Need to <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Succeed</span>
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+            <p className="text-xl max-w-2xl mx-auto text-gray-300">
               Powerful features designed to help you showcase your skills and get recognized
             </p>
           </div>
@@ -402,13 +398,13 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full hover-glow glow-card transition-all duration-300" style={{ background: '#645D4A', border: '1px solid rgba(161, 201, 154, 0.2)' }}>
+                  <Card className="h-full bg-[#0A0E27] border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                     <CardContent className="pt-6">
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 glow-radial" style={{ background: 'rgba(161, 201, 154, 0.2)' }}>
-                        <Icon className="w-6 h-6" style={{ color: '#A1C99A' }} />
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-blue-500/20">
+                        <Icon className="w-6 h-6 text-blue-400" />
                       </div>
-                      <h3 className="text-xl font-semibold mb-2" style={{ color: '#A1C99A' }}>{feature.title}</h3>
-                      <p style={{ color: 'rgba(161, 201, 154, 0.7)' }}>{feature.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+                      <p className="text-gray-400">{feature.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -419,17 +415,17 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0A0E27]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
+            <Badge className="mb-4 bg-blue-500/15 text-blue-400 border border-blue-500/30">
               <FileCheck className="w-3 h-3 mr-1" />
               Simple Process
             </Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-              Get Certified in <span className="gradient-text">4 Easy Steps</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+              Get Certified in <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">4 Easy Steps</span>
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+            <p className="text-xl max-w-2xl mx-auto text-gray-300">
               From selection to certification in minutes
             </p>
           </div>
@@ -447,20 +443,20 @@ export default function Home() {
                   className="relative"
                 >
                   {index < howItWorks.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5" style={{ background: 'linear-gradient(90deg, rgba(161, 201, 154, 0.4), transparent)', transform: 'translateX(-50%)' }} />
+                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-blue-500/40 to-transparent" style={{ transform: 'translateX(-50%)' }} />
                   )}
                   
                   <div className="text-center">
                     <div className="relative inline-block mb-4">
-                      <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)' }}>
-                        <Icon className="w-10 h-10" style={{ color: '#A1C99A' }} />
+                      <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto bg-blue-500/15">
+                        <Icon className="w-10 h-10 text-blue-400" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm glow-primary" style={{ background: '#A1C99A', color: '#010001' }}>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-blue-500 text-white">
                         {item.step}
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2" style={{ color: '#A1C99A' }}>{item.title}</h3>
-                    <p style={{ color: 'rgba(161, 201, 154, 0.7)' }}>{item.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                    <p className="text-gray-400">{item.description}</p>
                   </div>
                 </motion.div>
               );
@@ -470,17 +466,17 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#222321' }}>
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1A1F3A]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
+            <Badge className="mb-4 bg-blue-500/15 text-blue-400 border border-blue-500/30">
               <Sparkles className="w-3 h-3 mr-1" />
               Pricing
             </Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-              Choose Your <span className="gradient-text">Plan</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+              Choose Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Plan</span>
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+            <p className="text-xl max-w-2xl mx-auto text-gray-300">
               Start free, upgrade when you're ready
             </p>
           </div>
@@ -494,27 +490,26 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className={`h-full relative hover-glow ${plan.highlighted ? 'glow-primary' : 'glow-card'}`} style={{ background: '#645D4A', border: plan.highlighted ? '2px solid #A1C99A' : '1px solid rgba(161, 201, 154, 0.2)' }}>
+                <Card className={`h-full relative bg-[#0A0E27] ${plan.highlighted ? 'border-2 border-blue-500 shadow-xl shadow-blue-500/20' : 'border border-blue-500/20'}`}>
                   {plan.highlighted && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge className="glow-primary" style={{ background: '#A1C99A', color: '#010001' }}>Most Popular</Badge>
+                      <Badge className="bg-blue-500 text-white">Most Popular</Badge>
                     </div>
                   )}
                   
                   <CardHeader>
-                    <CardTitle className="text-2xl" style={{ color: '#A1C99A' }}>{plan.name}</CardTitle>
-                    <CardDescription style={{ color: 'rgba(161, 201, 154, 0.7)' }}>{plan.description}</CardDescription>
+                    <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
+                    <CardDescription className="text-gray-400">{plan.description}</CardDescription>
                     <div className="mt-4">
-                      <span className="text-4xl font-bold glow-text" style={{ color: '#A1C99A' }}>{plan.price}</span>
-                      <span className="ml-2" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>/ {plan.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="ml-2 text-gray-400">/ {plan.period}</span>
                     </div>
                   </CardHeader>
                   
                   <CardContent>
                     <Link href="/register">
                       <Button 
-                        className={`w-full mb-6 hover-glow press-animate ${plan.highlighted ? 'glow-primary' : ''}`}
-                        style={plan.highlighted ? { background: '#A1C99A', color: '#010001' } : { background: 'transparent', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.4)' }}
+                        className={`w-full mb-6 ${plan.highlighted ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/50' : 'bg-transparent text-white border border-blue-500/40 hover:bg-blue-500/10'}`}
                       >
                         {plan.cta}
                       </Button>
@@ -523,8 +518,8 @@ export default function Home() {
                     <ul className="space-y-3">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#A1C99A' }} />
-                          <span className="text-sm" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>{feature}</span>
+                          <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-blue-400" />
+                          <span className="text-sm text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -537,17 +532,17 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0A0E27]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
+            <Badge className="mb-4 bg-blue-500/15 text-blue-400 border border-blue-500/30">
               <Users className="w-3 h-3 mr-1" />
               Testimonials
             </Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-              Loved by <span className="gradient-text">Professionals</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+              Loved by <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Professionals</span>
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+            <p className="text-xl max-w-2xl mx-auto text-gray-300">
               Join thousands who've transformed their careers
             </p>
           </div>
@@ -561,26 +556,25 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full glow-card hover-glow" style={{ background: '#645D4A', border: '1px solid rgba(161, 201, 154, 0.2)' }}>
+                <Card className="h-full bg-[#1A1F3A] border border-blue-500/20 hover:border-blue-500/40 transition-all">
                   <CardContent className="pt-6">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4" style={{ fill: '#A1C99A', color: '#A1C99A' }} />
+                        <Star key={i} className="w-4 h-4 fill-blue-400 text-blue-400" />
                       ))}
                     </div>
                     
-                    <p className="mb-6" style={{ color: 'rgba(161, 201, 154, 0.8)' }}>{testimonial.content}</p>
+                    <p className="mb-6 text-gray-300">{testimonial.content}</p>
                     
                     <div className="flex items-center gap-3">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
-                        className="w-12 h-12 rounded-full object-cover glow-primary-soft"
-                        style={{ border: '2px solid rgba(161, 201, 154, 0.3)' }}
+                        className="w-12 h-12 rounded-full object-cover border-2 border-blue-500/30"
                       />
                       <div>
-                        <p className="font-semibold" style={{ color: '#A1C99A' }}>{testimonial.name}</p>
-                        <p className="text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
+                        <p className="font-semibold text-white">{testimonial.name}</p>
+                        <p className="text-sm text-gray-400">
                           {testimonial.role} at {testimonial.company}
                         </p>
                       </div>
@@ -594,24 +588,24 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#222321' }}>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1A1F3A]">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 glow-primary-soft" style={{ background: 'rgba(161, 201, 154, 0.15)', color: '#A1C99A', border: '1px solid rgba(161, 201, 154, 0.3)' }}>
+            <Badge className="mb-4 bg-blue-500/15 text-blue-400 border border-blue-500/30">
               FAQ
             </Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-              Frequently Asked <span className="gradient-text">Questions</span>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+              Frequently Asked <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Questions</span>
             </h2>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="rounded-lg px-6 glow-card hover-glow" style={{ background: '#645D4A', border: '1px solid rgba(161, 201, 154, 0.2)' }}>
-                <AccordionTrigger className="text-left hover:no-underline" style={{ color: '#A1C99A' }}>
+              <AccordionItem key={index} value={`item-${index}`} className="rounded-lg px-6 bg-[#0A0E27] border border-blue-500/20 hover:border-blue-500/40 transition-all">
+                <AccordionTrigger className="text-left hover:no-underline text-white">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+                <AccordionContent className="text-gray-400">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -621,26 +615,26 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0A0E27]">
         <div className="container mx-auto max-w-4xl">
-          <Card className="relative overflow-hidden glow-primary" style={{ background: '#645D4A', border: '2px solid rgba(161, 201, 154, 0.4)' }}>
-            <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at top left, rgba(161, 201, 154, 0.1), transparent), radial-gradient(circle at bottom right, rgba(100, 93, 74, 0.1), transparent)' }} />
+          <Card className="relative overflow-hidden bg-[#1A1F3A] border-2 border-blue-500/40 shadow-xl shadow-blue-500/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
             <CardContent className="relative pt-12 pb-12 text-center">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#A1C99A' }}>
-                Ready to <span className="gradient-text glow-text">Prove Your Skills?</span>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+                Ready to <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Prove Your Skills?</span>
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: 'rgba(161, 201, 154, 0.7)' }}>
+              <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
                 Join 50,000+ professionals who've advanced their careers with verified certifications
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/register">
-                  <Button size="lg" className="hover-glow press-animate glow-primary" style={{ background: '#A1C99A', color: '#010001' }}>
+                  <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/50">
                     Start Free Assessment
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/login">
-                  <Button size="lg" variant="outline" className="hover-glow" style={{ color: '#A1C99A', borderColor: 'rgba(161, 201, 154, 0.4)' }}>
+                  <Button size="lg" variant="outline" className="text-white border-blue-500/40 hover:bg-blue-500/10">
                     Sign In
                   </Button>
                 </Link>
@@ -651,61 +645,61 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid rgba(161, 201, 154, 0.2)', background: '#222321' }}>
+      <footer className="border-t border-blue-500/20 bg-[#1A1F3A]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4 hover-glow">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center glow-primary-soft" style={{ background: '#A1C99A' }}>
-                  <GraduationCap className="w-5 h-5" style={{ color: '#010001' }} />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-500 shadow-lg shadow-blue-500/50">
+                  <GraduationCap className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-lg font-bold gradient-text">Skill Proof AI</span>
+                <span className="text-lg font-bold text-white">Skill Proof AI</span>
               </Link>
-              <p className="text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
+              <p className="text-sm text-gray-400">
                 AI-powered skill certification platform trusted by professionals worldwide.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4" style={{ color: '#A1C99A' }}>Product</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
-                <li><Link href="#features" className="hover-glow transition-colors hover:text-[#A1C99A]">Features</Link></li>
-                <li><Link href="#pricing" className="hover-glow transition-colors hover:text-[#A1C99A]">Pricing</Link></li>
-                <li><Link href="/dashboard" className="hover-glow transition-colors hover:text-[#A1C99A]">Dashboard</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Roadmap</Link></li>
+              <h3 className="font-semibold mb-4 text-white">Product</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="#features" className="hover:text-white transition-colors">Features</Link></li>
+                <li><Link href="#pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+                <li><Link href="/dashboard" className="hover:text-white transition-colors">Dashboard</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Roadmap</Link></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4" style={{ color: '#A1C99A' }}>Company</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">About</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Blog</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Careers</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Contact</Link></li>
+              <h3 className="font-semibold mb-4 text-white">Company</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Blog</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4" style={{ color: '#A1C99A' }}>Legal</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Privacy</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Terms</Link></li>
-                <li><Link href="#" className="hover-glow transition-colors hover:text-[#A1C99A]">Security</Link></li>
+              <h3 className="font-semibold mb-4 text-white">Legal</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="#" className="hover:text-white transition-colors">Privacy</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Terms</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Security</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4" style={{ borderTop: '1px solid rgba(161, 201, 154, 0.2)' }}>
-            <p className="text-sm" style={{ color: 'rgba(161, 201, 154, 0.6)' }}>
+          <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-blue-500/20">
+            <p className="text-sm text-gray-400">
               © 2024 Skill Proof AI. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
-              <Badge variant="outline" className="gap-1 glow-primary-soft" style={{ borderColor: 'rgba(161, 201, 154, 0.3)', color: '#A1C99A' }}>
+              <Badge variant="outline" className="gap-1 border-blue-500/30 text-blue-400">
                 <Shield className="w-3 h-3" />
                 Enterprise Security
               </Badge>
-              <Badge variant="outline" className="gap-1 glow-primary-soft" style={{ borderColor: 'rgba(161, 201, 154, 0.3)', color: '#A1C99A' }}>
+              <Badge variant="outline" className="gap-1 border-blue-500/30 text-blue-400">
                 <Award className="w-3 h-3" />
                 Blockchain Verified
               </Badge>
